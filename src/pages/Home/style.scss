@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Emilys+Candy&display=swap");
+body {
+  background-color: #fff0f5;
+}
+
+header {
+  display: flex !important;
+  height: 70px;
+  width: 100%;
+  background-color: #673124;
+  nav {
+    display: flex !important;
+    width: 100%;
+  }
+
+  img {
+    padding: 5px 5px 0 5px;
+    width: 2.75rem;
+  }
+
+  ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    width: 100%;
+    justify-content: end;
+    padding: 0 20px 8px 0;
+    align-items: end;
+  }
+
+  nav ul li {
+    color: #f7dbec !important;
+    font-size: 20px;
+  }
+}
+
+.apresentacao {
+  .calda img {
+    width: 100%;
+    padding: 0 !important;
+  }
+  .titulo {
+    display: flex;
+    justify-content: center;
+  }
+  .titulo img {
+    width: 30rem;
+  }
+
+  h2 {
+    text-align: center;
+    font-style: normal;
+    font-size: 1.29rem;
+  }
+}
+
+footer {
+  display: flex;
+  background-color: #a3dee8;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+}
