@@ -14,8 +14,8 @@ header nav {
   width: 100%;
 }
 header img {
-  padding: 5px 5px 0 5px;
-  width: 2.75rem;
+  padding: 6px 6px 0 6px;
+  width: 2.7rem;
 }
 header ul {
   display: flex;
@@ -31,30 +31,46 @@ header nav ul li {
   font-size: 20px;
 }
 
-.apresentacao .calda img {
+.apresentacao .caldaChocolate {
   width: 100%;
   padding: 0 !important;
 }
-.apresentacao .titulo {
+.apresentacao .container_titulo {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: end;
+  gap: 13px;
 }
-.apresentacao .titulo img {
-  width: 30rem;
+.apresentacao .titulo1 {
+  width: 3.5rem;
+}
+.apresentacao .titulo2 {
+  width: 7rem;
+}
+.apresentacao .titulo3 {
+  width: 15rem;
 }
 .apresentacao h2 {
   text-align: center;
   font-style: normal;
-  font-size: 1.29rem;
+  font-size: 1.19rem;
 }
 
 footer {
   display: flex;
+  flex-direction: column;
   background-color: #a3dee8;
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 60px;
+  height: 112px;
   justify-content: center;
   align-items: center;
+  background-image: url("../../assets/footer.png");
+  background-size: cover;
+  background-position: center;
+}
+footer .caldaMorango {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

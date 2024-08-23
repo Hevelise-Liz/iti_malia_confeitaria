@@ -2,8 +2,11 @@ import React from "react";
 import "./style.scss";
 import "../../styles/globalStyles.scss";
 import logo from "../../assets/logo.png";
-import calda2 from "../../assets/calda2.png";
-import titulo from "../../assets/titulo.png";
+import caldaChocolate from "../../assets/caldaChocolate.png";
+import titulo1 from "../../assets/titulo1.png";
+import titulo2 from "../../assets/titulo2.png";
+import titulo3 from "../../assets/titulo3.png";
+import caldaMorango from "../../assets/caldaMorango.png";
 function Home() {
   return (
     <body>
@@ -19,22 +22,24 @@ function Home() {
             <li>Contato</li>
           </ul>
         </nav>
-   
       </header>
 
       <main>
         <section className="apresentacao">
-        <a className="calda" href="">
-          <img src={calda2} alt="calda" />
-        </a>
-        <a className="titulo" href="">
-          <img src={titulo} alt="titulo" />
-        </a>
-        <h2>Produtos feitos com amor para adoçar sua vida! 💗</h2>
-        </section>
+          <img className="caldaChocolate" src={caldaChocolate} alt="calda" />
 
+          <div className="container_titulo">
+            <img className="titulo1" src={titulo1} alt="titulo" />
+
+            <img className="titulo2" src={titulo2} alt="titulo" />
+
+            <img className="titulo3" src={titulo3} alt="titulo" />
+          </div>
+          <h2>Produtos feitos com amor por Zi Bittencourt! 💗</h2>
+        </section>
       </main>
-      <footer>© 2024 Hevelise Dias. Todos os direitos reservados.</footer>
+      <footer>
+        <p>© 2024 Hevelise Dias. Todos os direitos reservados.</p></footer>
     </body>
   );
 }
