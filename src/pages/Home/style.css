@@ -3,6 +3,10 @@ body {
   background-color: #fff0f5;
 }
 
+main {
+  margin: 0 3rem 3rem 3rem;
+}
+
 header {
   display: flex !important;
   height: 70px;
@@ -31,10 +35,11 @@ header nav ul li {
   font-size: 20px;
 }
 
-.apresentacao .caldaChocolate {
+.caldaChocolate {
   width: 100%;
   padding: 0 !important;
 }
+
 .apresentacao .container_titulo {
   display: flex;
   flex-direction: row;
@@ -43,34 +48,48 @@ header nav ul li {
   gap: 13px;
 }
 .apresentacao .titulo1 {
-  width: 3.5rem;
+  width: 4rem;
 }
 .apresentacao .titulo2 {
-  width: 7rem;
+  width: 7.8rem;
 }
 .apresentacao .titulo3 {
-  width: 15rem;
+  width: 16rem;
 }
 .apresentacao h2 {
   text-align: center;
   font-style: normal;
   font-size: 1.19rem;
+  margin: 0 0 4rem 0;
 }
 
 footer {
   display: flex;
   flex-direction: column;
-  background-color: #a3dee8;
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  bottom: 0 !important;
   width: 100%;
-  height: 112px;
+  height: 5rem;
   justify-content: center;
   align-items: center;
   background-image: url("../../assets/footer.png");
   background-size: cover;
   background-position: center;
 }
-footer .caldaMorango {
-  width: 100%;
+
+/* barra de rolagem */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #673124;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
 }/*# sourceMappingURL=style.css.map */

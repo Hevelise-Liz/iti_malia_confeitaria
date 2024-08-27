@@ -6,4 +6,9 @@
   font-weight: lighter;
   font-style: normal;
   color: #673124;
+}
+
+a {
+  list-style: none;
+  text-decoration: none;
 }/*# sourceMappingURL=globalStyles.css.map */
