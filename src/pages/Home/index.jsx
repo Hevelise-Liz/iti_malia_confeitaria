@@ -7,6 +7,9 @@ import titulo1 from "../../assets/titulo1.png";
 import titulo2 from "../../assets/titulo2.png";
 import titulo3 from "../../assets/titulo3.png";
 import Carousel from "../../components/carousel";
+import insta from "../../assets/insta.png";
+import whats from "../../assets/whats.png";
+import face from "../../assets/face.png";
 
 const images = [
   "https://3.bp.blogspot.com/-OxRffVDgZdc/YRp6okOUgGI/AAAAAAAAy14/Jwri_7U0FlAp1wnwX3JIRCqyx3AkeuSgACK4BGAYYCw/s1600/image-781124.jpg",
@@ -41,14 +44,26 @@ function Home() {
         </a>
         <nav>
           <ul>
-            <li>Início</li>
-            <li>Produtos</li>
-            <li>Sobre</li>
-            <li>Contato</li>
+            <li>
+              <a href="">Início</a>
+            </li>
+            <li>
+              <a href="">Produtos</a>
+            </li>
+            <li>
+              <a href="">Sobre</a>
+            </li>
+            <li>
+              <a href="">Contato</a>
+            </li>
           </ul>
         </nav>
       </header>
-      <img className={`caldaChocolate ${visible ? "visible" : "hidden"}`} src={caldaChocolate} alt="calda" />
+      <img
+        className={`caldaChocolate ${visible ? "visible" : "hidden"}`}
+        src={caldaChocolate}
+        alt="calda"
+      />
       <main>
         <section className="apresentacao">
           <div className="container_titulo">
@@ -94,7 +109,6 @@ function Home() {
             consectetur corporis!
           </p>
 
-
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati
             ea veritatis, eum velit iure enim eveniet delectus laborum esse.
@@ -104,7 +118,30 @@ function Home() {
             adipisci quidem enim, impedit veniam! Eveniet illo illum labore
             consectetur corporis!
           </p>
+        </section>
 
+        <section className="contato">
+          <h2>EXPERIMENTE NOSSAS DELÍCIAS!</h2>
+          <h3>ENTRE EM CONTATO:</h3>
+
+          <ul>
+            <li>
+              <a href="http://" target="_blank" rel="noopener noreferrer">
+                <img src={face} alt="logo whats" />
+              </a>
+            </li>
+            <li>
+              <a href="http://" target="_blank" rel="noopener noreferrer">
+                <img src={insta} alt="logo insta" />
+              </a>
+            </li>
+
+            <li>
+              <a href="http://" target="_blank" rel="noopener noreferrer">
+                <img src={whats} alt="logo whats" />
+              </a>
+            </li>
+          </ul>
         </section>
       </main>
       <footer>
