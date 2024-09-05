@@ -3,9 +3,6 @@ import "./style.scss";
 import "../../styles/globalStyles.scss";
 import logo from "../../assets/logo.png";
 import caldaChocolate from "../../assets/caldaChocolate.png";
-import titulo1 from "../../assets/titulo1.png";
-import titulo2 from "../../assets/titulo2.png";
-import titulo3 from "../../assets/titulo3.png";
 import Carousel from "../../components/carousel";
 import insta from "../../assets/insta.png";
 import whats from "../../assets/whats.png";
@@ -37,24 +34,25 @@ function Home() {
   }, [prevScrollPos]);
 
   return (
-    <div>
+    <>
       <header className={`header ${visible ? "visible" : "hidden"}`}>
-        <a className="logo" href="">
+        <a className="logo" href="#inicio">
           <img src={logo} alt="Logo" />
         </a>
         <nav>
           <ul>
             <li>
-              <a href="">Início</a>
+              <a href="#inicio">Início</a>
             </li>
             <li>
-              <a href="">Produtos</a>
+              <a href="#sobre">Sobre</a>
             </li>
             <li>
-              <a href="">Sobre</a>
+              <a href="#produtos">Produtos</a>
             </li>
+
             <li>
-              <a href="">Contato</a>
+              <a href="#contato">Contato</a>
             </li>
           </ul>
         </nav>
@@ -65,64 +63,61 @@ function Home() {
         alt="calda"
       />
       <main>
-        <section className="apresentacao">
-          <div className="container_titulo">
-            <img className="titulo1" src={titulo1} alt="titulo" />
-            <img className="titulo2" src={titulo2} alt="titulo" />
-            <img className="titulo3" src={titulo3} alt="titulo" />
-          </div>
-          <h2>Produtos feitos com amor por Zi Bittencourt! 💗</h2>
+        <section id="inicio">
+          <h1>Iti Malia Confeitaria </h1>
+          <h2>Produtos feitos com amor por Zi Bittencourt!</h2>
         </section>
 
         <section>
           <Carousel images={images} interval={4000} />
         </section>
 
-        <section>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel
-            nulla sunt earum debitis, suscipit pariatur deserunt sequi officia
-            quae, sit rerum! Minima nesciunt accusantium delectus deserunt
-            doloremque odit eaque! Lorem ipsum, dolor sit amet consectetur
-            adipisicing elit. Hic id officiis eos inventore sit nulla aperiam
-            ipsum! Officia suscipit tenetur, illo est repellat at, ducimus
-            voluptatum velit amet quaerat sequi!
-          </p>
+        <section id="sobre">
+          <div>
+            <div>
+              <h2>UM POUQUINHO DA NOSSA HISTÓRIA:</h2>
 
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati
-            ea veritatis, eum velit iure enim eveniet delectus laborum esse.
-            Suscipit excepturi ex rerum amet at aut laborum dignissimos deleniti
-            expedita. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Porro quis nobis nihil iste quasi cumque placeat cum, veritatis sint
-            adipisci quidem enim, impedit veniam! Eveniet illo illum labore
-            consectetur corporis!
-          </p>
-
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati
-            ea veritatis, eum velit iure enim eveniet delectus laborum esse.
-            Suscipit excepturi ex rerum amet at aut laborum dignissimos deleniti
-            expedita. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Porro quis nobis nihil iste quasi cumque placeat cum, veritatis sint
-            adipisci quidem enim, impedit veniam! Eveniet illo illum labore
-            consectetur corporis!
-          </p>
-
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati
-            ea veritatis, eum velit iure enim eveniet delectus laborum esse.
-            Suscipit excepturi ex rerum amet at aut laborum dignissimos deleniti
-            expedita. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Porro quis nobis nihil iste quasi cumque placeat cum, veritatis sint
-            adipisci quidem enim, impedit veniam! Eveniet illo illum labore
-            consectetur corporis!
-          </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+                vel nulla sunt earum debitis, suscipit pariatur deserunt sequi
+                officia quae, sit rerum! Minima nesciunt accusantium delectus
+                deserunt doloremque odit eaque! Lorem ipsum, dolor sit amet
+                consectetur adipisicing elit. Hic id officiis eos inventore sit
+                nulla aperiam ipsum! Officia suscipit tenetur, illo est repellat
+                at, ducimus voluptatum velit amet quaerat sequi!
+              </p>
+            </div>
+          </div>
         </section>
 
-        <section className="contato">
+        <section id="produtos">
+          <h2>NOSSOS PRODUTOS:</h2>
+          <h3>Bolos e tortas:</h3>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <h3>Docinhos:</h3>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <h3>Sobremesas:</h3>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </section>
+
+        <section id="contato">
           <h2>EXPERIMENTE NOSSAS DELÍCIAS!</h2>
-          <h3>ENTRE EM CONTATO:</h3>
+          <h3>Entre em contato:</h3>
 
           <ul>
             <li>
@@ -158,7 +153,7 @@ function Home() {
           .
         </p>
       </footer>
-    </div>
+    </>
   );
 }
 
