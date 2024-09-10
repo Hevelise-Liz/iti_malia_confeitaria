@@ -4,9 +4,110 @@ import "../../styles/globalStyles.scss";
 import logo from "../../assets/logo.png";
 import caldaChocolate from "../../assets/caldaChocolate.png";
 import Carousel from "../../components/carousel";
+import Cards from "../../components/cards";
 import insta from "../../assets/insta.png";
 import whats from "../../assets/whats.png";
 import face from "../../assets/face.png";
+import core from "../../assets/core.png";
+
+const bolos = [
+  {
+    title: "bolo1",
+    imgSrc:
+      "https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80",
+    desc: "Descrição do bolo 1.",
+  },
+  {
+    title: "bolo2",
+    imgSrc:
+      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+    desc: "Descrição do bolo 2.",
+  },
+  {
+    title: "bolo2",
+    imgSrc:
+      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+    desc: "Descrição do bolo 2.",
+  },
+  {
+    title: "bolo2",
+    imgSrc:
+      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+    desc: "Descrição do bolo 2.",
+  },
+  {
+    title: "bolo2",
+    imgSrc:
+      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+    desc: "Descrição do bolo 2.",
+  },
+];
+
+const doces = [
+  {
+    title: "Leão",
+    imgSrc:
+      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+    desc: "Descrição do leão.",
+  },
+  {
+    title: "Foca",
+    imgSrc:
+      "https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80",
+    desc: "Descrição da foca.",
+  },
+  {
+    title: "Foca",
+    imgSrc:
+      "https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80",
+    desc: "Descrição da foca.",
+  },
+  {
+    title: "Foca",
+    imgSrc:
+      "https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80",
+    desc: "Descrição da foca.",
+  },
+  {
+    title: "Foca",
+    imgSrc:
+      "https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80",
+    desc: "Descrição da foca.",
+  },
+];
+
+const sobremesas = [
+  {
+    title: "Leão",
+    imgSrc:
+      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+    desc: "Descrição do leão.",
+  },
+  {
+    title: "Foca",
+    imgSrc:
+      "https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80",
+    desc: "Descrição da foca.",
+  },
+  {
+    title: "Foca",
+    imgSrc:
+      "https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80",
+    desc: "Hawks are a group of medium-sized diurnal birds of prey of the family Accipitridae. Hawks are widely distributed and vary greatly in size. The subfamily Accipitrinae includes goshawks, sparrowhawks, sharp-shinned hawks and others. This subfamily are mainly woodland birds with long tails and high visual acuity. They hunt by dashing suddenly from a concealed perch.",
+  },
+  {
+    title: "Foca",
+    imgSrc:
+      "https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80",
+    desc: "Hawks are a group of medium-sized diurnal birds of prey of the family Accipitridae. Hawks are widely distributed and vary greatly in size. The subfamily Accipitrinae includes goshawks, sparrowhawks, sharp-shinned hawks and others. This subfamily are mainly woodland birds with long tails and high visual acuity. They hunt by dashing suddenly from a concealed perch.",
+  },
+  {
+    title: "Foca",
+    imgSrc:
+      "https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80",
+    desc: "Hawks are a group of medium-sized diurnal birds of prey of the family Accipitridae. Hawks are widely distributed and vary greatly in size. The subfamily Accipitrinae includes goshawks, sparrowhawks, sharp-shinned hawks and others. This subfamily are mainly woodland birds with long tails and high visual acuity. They hunt by dashing suddenly from a concealed perch.",
+  },
+];
 
 const images = [
   "https://3.bp.blogspot.com/-OxRffVDgZdc/YRp6okOUgGI/AAAAAAAAy14/Jwri_7U0FlAp1wnwX3JIRCqyx3AkeuSgACK4BGAYYCw/s1600/image-781124.jpg",
@@ -65,7 +166,10 @@ function Home() {
       <main>
         <section id="inicio">
           <h1>Iti Malia Confeitaria </h1>
-          <h2>Produtos feitos com amor por Zi Bittencourt!</h2>
+          <h2>
+            Produtos feitos com amor por Zi Bittencourt!{" "}
+            <img src={core} alt="" />
+          </h2>
         </section>
 
         <section>
@@ -73,9 +177,9 @@ function Home() {
         </section>
 
         <section id="sobre">
-          <div>
+          <div className="fundo">
             <div>
-              <h2>UM POUQUINHO DA NOSSA HISTÓRIA:</h2>
+              <h2>Um pouquinho da nossa história:</h2>
 
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
@@ -93,26 +197,13 @@ function Home() {
         <section id="produtos">
           <h2>NOSSOS PRODUTOS:</h2>
           <h3>Bolos e tortas:</h3>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
+
+          <Cards cardsData={bolos} />
+
           <h3>Docinhos:</h3>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
+          <Cards cardsData={doces} />
           <h3>Sobremesas:</h3>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
+          <Cards cardsData={sobremesas} />
         </section>
 
         <section id="contato">
