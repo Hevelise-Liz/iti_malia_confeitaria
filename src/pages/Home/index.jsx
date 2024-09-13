@@ -1,122 +1,117 @@
 import React, { useState, useEffect } from "react";
 import "./style.scss";
 import "../../styles/globalStyles.scss";
-import logo from "../../assets/logo.png";
-import caldaChocolate from "../../assets/caldaChocolate.png";
+import logo from "../../../public/assets/logo.png";
+import caldaChocolate from "../../../public/assets/caldaChocolate.png";
 import Carousel from "../../components/carousel";
 import Cards from "../../components/cards";
-import insta from "../../assets/insta.png";
-import whats from "../../assets/whats.png";
-import face from "../../assets/face.png";
-import core from "../../assets/core.png";
+import insta from "../../../public/assets/insta.png";
+import whats from "../../../public/assets/whats.png";
+import face from "../../../public/assets/face.png";
+import core from "../../../public/assets/core.png";
+import linha1 from "../../../public/assets/linha1.png";
+import linha2 from "../../../public/assets/linha2.png";
+import linha3 from "../../../public/assets/linha3.png";
+import linha4 from "../../../public/assets/linha4.png";
+import linha5 from "../../../public/assets/linha5.png";
+// import linha1 from "../../../public/assets/linha1.png";
+// import linha2 from "../../../public/assets/linha2.png";
+// import linha3 from "../../../public/assets/linha3.png";
+// import linha4 from "../../../public/assets/linha4.png";
+// import linha5 from "../../../public/assets/linha5.png";
 
 const bolos = [
   {
-    title: "bolo1",
-    imgSrc:
-      "https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80",
-    desc: "Descrição do bolo 1.",
+    title: "Bolo Aniversário",
+    imgSrc: "/assets/bolo1.jpeg",
+    desc: "Bolos com decoração á escolha do cliente, podendo também escolhes entre os recheios: brigadeiro, brigadeiro branco, frutas vermelhas, morango.",
   },
   {
-    title: "bolo2",
-    imgSrc:
-      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
-    desc: "Descrição do bolo 2.",
+    title: "Bolo Casamento",
+    imgSrc: "/assets/bolo2.jpeg",
+    desc: "Bolos com decoração á escolha do cliente, podendo também escolhes entre os recheios: brigadeiro, brigadeiro branco, frutas vermelhas, morango.",
   },
   {
-    title: "bolo2",
-    imgSrc:
-      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
-    desc: "Descrição do bolo 2.",
+    title: "Bolo Meme",
+    imgSrc: "/assets/bolo3.jpeg",
+    desc: "Bolos com decoração á escolha do cliente, podendo também escolhes entre os recheios: brigadeiro, brigadeiro branco, frutas vermelhas, morango.",
   },
   {
-    title: "bolo2",
-    imgSrc:
-      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
-    desc: "Descrição do bolo 2.",
+    title: "Bolo Padrão",
+    imgSrc: "/assets/bolo4.jpeg",
+    desc: "Bolos com decoração á escolha do cliente, podendo também escolhes entre os recheios: brigadeiro, brigadeiro branco, frutas vermelhas, morango.",
   },
   {
-    title: "bolo2",
-    imgSrc:
-      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
-    desc: "Descrição do bolo 2.",
+    title: "Bolo Infantil",
+    imgSrc: "/assets/bolo5.jpeg",
+    desc: "Bolos com decoração á escolha do cliente, podendo também escolhes entre os recheios: brigadeiro, brigadeiro branco, frutas vermelhas, morango.",
   },
 ];
 
 const doces = [
   {
-    title: "Leão",
-    imgSrc:
-      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
-    desc: "Descrição do leão.",
+    title: "Copinhos Doces",
+    imgSrc: "/assets/doce1.jpeg",
+    desc: "Copinhos de chocolates recheados com brigadeiro ou brigadeiro branco.",
   },
   {
-    title: "Foca",
-    imgSrc:
-      "https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80",
-    desc: "Descrição da foca.",
+    title: "Doces Artesanais",
+    imgSrc: "/assets/doce2.jpeg",
+    desc: "Docinhos artesanais personalizados com o tema da festa.",
   },
   {
-    title: "Foca",
-    imgSrc:
-      "https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80",
-    desc: "Descrição da foca.",
+    title: "Doces Gourmet",
+    imgSrc: "/assets/doce3.jpeg",
+    desc: "Docinhos de festa no sabor nuttela, ninho com nuttela ou brigadeiro branco com frutas vermelhas.",
   },
   {
-    title: "Foca",
-    imgSrc:
-      "https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80",
-    desc: "Descrição da foca.",
+    title: "Doces Tradicionais",
+    imgSrc: "/assets/doce4.jpeg",
+    desc: "Docinhos de festa no sabor brigadeiro, paçoca ou brigadeiro branco.",
   },
   {
-    title: "Foca",
-    imgSrc:
-      "https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80",
-    desc: "Descrição da foca.",
+    title: "FocaDoces Arco=Íris",
+    imgSrc: "/assets/doce5.jpeg",
+    desc: "Docinhos de festa no sabor Nuttela, ninho com Nuttela ou brigadeiro branco com frutas vermelhas.",
   },
 ];
 
 const sobremesas = [
   {
-    title: "Leão",
-    imgSrc:
-      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
-    desc: "Descrição do leão.",
+    title: "Palia Italiana",
+    imgSrc: "/assets/sobremesa1.jpeg",
+    desc: "Palia Italiana de brigadeiro ou brigadeiro branco",
   },
   {
-    title: "Foca",
-    imgSrc:
-      "https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80",
-    desc: "Descrição da foca.",
+    title: "Empadas Doces",
+    imgSrc: "/assets/sobremesa2.jpeg",
+    desc: "Empadinhas de leite condensado ou ninho com Nutella",
   },
   {
-    title: "Foca",
-    imgSrc:
-      "https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80",
-    desc: "Hawks are a group of medium-sized diurnal birds of prey of the family Accipitridae. Hawks are widely distributed and vary greatly in size. The subfamily Accipitrinae includes goshawks, sparrowhawks, sharp-shinned hawks and others. This subfamily are mainly woodland birds with long tails and high visual acuity. They hunt by dashing suddenly from a concealed perch.",
+    title: "Cookies com Gotas",
+    imgSrc: "/assets/sobremesa3.jpeg",
+    desc: "Cookies crocantes com gotas de chocolate.",
   },
   {
-    title: "Foca",
-    imgSrc:
-      "https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80",
-    desc: "Hawks are a group of medium-sized diurnal birds of prey of the family Accipitridae. Hawks are widely distributed and vary greatly in size. The subfamily Accipitrinae includes goshawks, sparrowhawks, sharp-shinned hawks and others. This subfamily are mainly woodland birds with long tails and high visual acuity. They hunt by dashing suddenly from a concealed perch.",
+    title: "Barras Recheadas",
+    imgSrc: "/assets/sobremesa4.jpeg",
+    desc: "Barras super recheadas nos sabores mousse de maracujá, brigadeiro, mousse de morango ou brigadeiro branco ",
   },
   {
-    title: "Foca",
-    imgSrc:
-      "https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80",
-    desc: "Hawks are a group of medium-sized diurnal birds of prey of the family Accipitridae. Hawks are widely distributed and vary greatly in size. The subfamily Accipitrinae includes goshawks, sparrowhawks, sharp-shinned hawks and others. This subfamily are mainly woodland birds with long tails and high visual acuity. They hunt by dashing suddenly from a concealed perch.",
+    title: "Brownies",
+    imgSrc: "/assets/sobremesa5.jpeg",
+    desc: "Brownies recheados com doce de leite, Nutella ou brigadeiro.",
   },
 ];
 
 const images = [
-  "https://3.bp.blogspot.com/-OxRffVDgZdc/YRp6okOUgGI/AAAAAAAAy14/Jwri_7U0FlAp1wnwX3JIRCqyx3AkeuSgACK4BGAYYCw/s1600/image-781124.jpg",
-  "https://3.bp.blogspot.com/-OxRffVDgZdc/YRp6okOUgGI/AAAAAAAAy14/Jwri_7U0FlAp1wnwX3JIRCqyx3AkeuSgACK4BGAYYCw/s1600/image-781124.jpg",
-  "https://3.bp.blogspot.com/-OxRffVDgZdc/YRp6okOUgGI/AAAAAAAAy14/Jwri_7U0FlAp1wnwX3JIRCqyx3AkeuSgACK4BGAYYCw/s1600/image-781124.jpg",
-  "https://3.bp.blogspot.com/-OxRffVDgZdc/YRp6okOUgGI/AAAAAAAAy14/Jwri_7U0FlAp1wnwX3JIRCqyx3AkeuSgACK4BGAYYCw/s1600/image-781124.jpg",
-  "https://3.bp.blogspot.com/-OxRffVDgZdc/YRp6okOUgGI/AAAAAAAAy14/Jwri_7U0FlAp1wnwX3JIRCqyx3AkeuSgACK4BGAYYCw/s1600/image-781124.jpg",
-  "https://3.bp.blogspot.com/-OxRffVDgZdc/YRp6okOUgGI/AAAAAAAAy14/Jwri_7U0FlAp1wnwX3JIRCqyx3AkeuSgACK4BGAYYCw/s1600/image-781124.jpg",
-  "https://3.bp.blogspot.com/-OxRffVDgZdc/YRp6okOUgGI/AAAAAAAAy14/Jwri_7U0FlAp1wnwX3JIRCqyx3AkeuSgACK4BGAYYCw/s1600/image-781124.jpg",
+  "/assets/bolo1.jpeg",
+  "/assets/doce2.jpeg",
+  "/assets/sobremesa5.jpeg",
+  "/assets/bolo3.jpeg",
+  "/assets/doce1.jpeg",
+  "/assets/bolo4.jpeg",
+  "/assets/doce5.jpeg",
 ];
 
 function Home() {
@@ -182,20 +177,35 @@ function Home() {
               <h2>Um pouquinho da nossa história:</h2>
 
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-                vel nulla sunt earum debitis, suscipit pariatur deserunt sequi
-                officia quae, sit rerum! Minima nesciunt accusantium delectus
-                deserunt doloremque odit eaque! Lorem ipsum, dolor sit amet
-                consectetur adipisicing elit. Hic id officiis eos inventore sit
-                nulla aperiam ipsum! Officia suscipit tenetur, illo est repellat
-                at, ducimus voluptatum velit amet quaerat sequi!
+                A melhor coisa que existe é poder aliar paixão e vocação, não é
+                mesmo!?
               </p>
+       
+              <p>
+                {" "}
+                A Iti Malia é fruto da paixão por confeitaria aliada ao talento
+                da confeiteira Zi Bittencourt.
+              </p>
+
+              <p>Zi sempre amou cozinhar e reunir os amigos para degustar suas maravilhas.</p>
+
+              <p>
+                Nossa missão é proporcionar satisfação á cada mordida para
+                nossos clientes.
+              </p>
+              <p>Usamos produtos de qualidade e tudo é feito com muito amor.</p>
+
+              <img src={linha4} alt="logo whats" />
             </div>
           </div>
         </section>
 
         <section id="produtos">
-          <h2>NOSSOS PRODUTOS:</h2>
+          <h2>
+            {" "}
+            <img src={linha1} alt="logo whats" /> NOSSOS PRODUTOS{" "}
+            <img src={linha2} alt="logo whats" />
+          </h2>
           <h3>Bolos e tortas:</h3>
 
           <Cards cardsData={bolos} />

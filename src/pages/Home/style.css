@@ -93,7 +93,7 @@ header ul li a {
 }
 
 #sobre {
-  background-image: url("../../assets/funndoo.jpg");
+  background-image: url("../../public/assets/funndoo.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -108,7 +108,6 @@ header ul li a {
 #sobre div {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.7921568627);
   border-radius: 8px;
@@ -125,6 +124,11 @@ header ul li a {
 }
 #sobre p {
   font-size: 26px;
+  text-align: left !important;
+}
+#sobre img {
+  width: 90%;
+  margin-top: 1rem;
 }
 
 #produtos {
@@ -137,10 +141,17 @@ header ul li a {
   margin: 0 0 10px 0;
   text-align: center;
 }
+#produtos h2 img {
+  width: 300px;
+  padding: 0 20px;
+}
 #produtos h3 {
   font-size: 40px;
-  text-align: start !important;
+  text-align: left !important;
   font-weight: 700;
+}
+#produtos h3:not(:first-of-type) {
+  margin-top: 2rem;
 }
 
 #contato {
@@ -188,7 +199,7 @@ footer {
   height: 6rem;
   justify-content: center;
   align-items: center;
-  background-image: url("../../assets/footer.png");
+  background-image: url("../../public/assets/footer.png");
   background-size: contain;
   background-position: center;
 }
