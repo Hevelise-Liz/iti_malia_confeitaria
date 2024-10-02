@@ -33,9 +33,9 @@ header ul li:hover {
   transform: scale(1.2);
 }
 header ul li a {
-  color: antiquewhite !important;
+  color: #fff !important;
   font-size: 23px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .header.hidden {
@@ -103,7 +103,7 @@ header ul li a {
 #sobre .fundo {
   background-color: rgba(255, 255, 255, 0.5098039216);
   border-radius: 8px;
-  padding: 60px 80px;
+  padding: 60px;
 }
 #sobre div {
   display: flex;
@@ -114,6 +114,7 @@ header ul li a {
   padding: 40px 60px;
   max-width: 60rem;
   margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 #sobre h2 {
   font-size: 65px;
@@ -147,11 +148,10 @@ header ul li a {
 }
 #produtos h3 {
   font-size: 40px;
-  text-align: left !important;
   font-weight: 700;
 }
 #produtos h3:not(:first-of-type) {
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 #contato {
@@ -210,9 +210,11 @@ footer p {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border-radius: 10px;
+  margin: 0 2rem;
   font-family: "Patrick Hand", cursive;
   font-weight: 900;
   font-style: normal;
+  text-align: center;
 }
 footer p a {
   font-family: "Patrick Hand", cursive;

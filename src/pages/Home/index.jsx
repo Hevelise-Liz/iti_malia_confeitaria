@@ -14,11 +14,6 @@ import linha2 from "../../../public/assets/linha2.png";
 import linha3 from "../../../public/assets/linha3.png";
 import linha4 from "../../../public/assets/linha4.png";
 import linha5 from "../../../public/assets/linha5.png";
-// import linha1 from "../../../public/assets/linha1.png";
-// import linha2 from "../../../public/assets/linha2.png";
-// import linha3 from "../../../public/assets/linha3.png";
-// import linha4 from "../../../public/assets/linha4.png";
-// import linha5 from "../../../public/assets/linha5.png";
 
 const bolos = [
   {
@@ -70,7 +65,7 @@ const doces = [
     desc: "Docinhos de festa no sabor brigadeiro, paçoca ou brigadeiro branco.",
   },
   {
-    title: "FocaDoces Arco=Íris",
+    title: "Doces Arco-Íris",
     imgSrc: "/assets/doce5.jpeg",
     desc: "Docinhos de festa no sabor Nuttela, ninho com Nuttela ou brigadeiro branco com frutas vermelhas.",
   },
@@ -178,16 +173,14 @@ function Home() {
 
               <p>
                 A melhor coisa que existe é poder aliar paixão e vocação, não é
-                mesmo!?
-              </p>
-       
-              <p>
-                {" "}
-                A Iti Malia é fruto da paixão por confeitaria aliada ao talento
-                da confeiteira Zi Bittencourt.
+                mesmo!? A Iti Malia é fruto da paixão por confeitaria aliada ao
+                talento da confeiteira Zi Bittencourt.
               </p>
 
-              <p>Zi sempre amou cozinhar e reunir os amigos para degustar suas maravilhas.</p>
+              <p>
+                Zi sempre amou cozinhar e reunir os amigos para degustar suas
+                maravilhas.
+              </p>
 
               <p>
                 Nossa missão é proporcionar satisfação á cada mordida para
@@ -203,8 +196,8 @@ function Home() {
         <section id="produtos">
           <h2>
             {" "}
-            <img src={linha1} alt="logo whats" /> NOSSOS PRODUTOS{" "}
-            <img src={linha2} alt="logo whats" />
+            <img src={linha2} alt="logo whats" /> NOSSOS PRODUTOS{" "}
+            <img src={linha1} alt="logo whats" />
           </h2>
           <h3>Bolos e tortas:</h3>
 
@@ -227,7 +220,11 @@ function Home() {
               </a>
             </li>
             <li>
-              <a href="http://" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.instagram.com/itimaliaconfeitaria/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img src={insta} alt="logo insta" />
               </a>
             </li>

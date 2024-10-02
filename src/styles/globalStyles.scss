@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap");
 
 * {
   padding: 0;
@@ -14,15 +14,8 @@
 }
 
 body {
-  background: linear-gradient(
-    180deg,
-    #ffe4e1,
-    #fffaf9,
-    #e1fcff,
-    #ffe4e1,
-    #fffaf9,
-    #e1fcff
-  );
+  // background: linear-gradient(90deg, #e1fcff, #ffe4e1, #e1fcff);
+  background: #fff;
 }
 
 a {

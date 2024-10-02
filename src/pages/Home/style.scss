@@ -37,12 +37,9 @@ header {
       }
 
       a {
-        color: antiquewhite !important;
+        color: #fff !important;
         font-size: 23px;
-        // text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-        //   1px 1px 0 #000;
-
-        font-weight: 600;
+        font-weight: 500;
       }
     }
   }
@@ -115,7 +112,7 @@ header {
   .fundo {
     background-color: #ffffff82;
     border-radius: 8px;
-    padding: 60px 80px;
+    padding: 60px;
   }
   div {
     display: flex;
@@ -127,6 +124,7 @@ header {
     padding: 40px 60px;
     max-width: 60rem;
     margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 
   h2 {
@@ -143,8 +141,7 @@ header {
     text-align: left !important;
   }
 
-  img{
-
+  img {
     width: 90%;
     margin-top: 1rem;
   }
@@ -159,23 +156,19 @@ header {
     font-weight: 700;
     margin: 0 0 10px 0;
     text-align: center;
-    img{
+    img {
       width: 300px;
-     padding:  0 20px;
+      padding: 0 20px;
     }
-   
   }
 
   h3 {
-
     font-size: 40px;
-    text-align: left !important;
     font-weight: 700;
-
   }
-  
+
   h3:not(:first-of-type) {
-    margin-top: 2rem;
+    margin-top: 4rem;
   }
 }
 
@@ -232,7 +225,6 @@ footer {
   background-image: url("../../public/assets/footer.png");
   background-size: contain;
   background-position: center;
-  
 
   p {
     color: black;
@@ -241,10 +233,11 @@ footer {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border-radius: 10px;
-
+    margin: 0 2rem;
     font-family: "Patrick Hand", cursive;
     font-weight: 900;
     font-style: normal;
+    text-align: center;
 
     a {
       font-family: "Patrick Hand", cursive;
