@@ -79,6 +79,11 @@ header ul li a {
   font-weight: 500;
   font-style: normal;
 }
+@media only screen and (max-width: 538px) {
+  #inicio h1 {
+    font-size: 60px;
+  }
+}
 #inicio h2 {
   text-align: center;
   font-style: normal;
@@ -87,6 +92,12 @@ header ul li a {
   font-family: "Satisfy", cursive;
   font-weight: 500;
   font-style: normal;
+}
+@media only screen and (max-width: 538px) {
+  #inicio h2 {
+    margin: 0 0 1rem 0;
+    font-size: 30px;
+  }
 }
 #inicio img {
   width: 35px;
@@ -100,10 +111,25 @@ header ul li a {
   margin: 4rem 0;
   padding: 5rem;
 }
+@media only screen and (max-width: 860px) {
+  #sobre {
+    padding: 2rem;
+  }
+}
+@media only screen and (max-width: 478px) {
+  #sobre {
+    padding: 0.8rem;
+  }
+}
 #sobre .fundo {
   background-color: rgba(255, 255, 255, 0.5098039216);
   border-radius: 8px;
   padding: 60px;
+}
+@media only screen and (max-width: 690px) {
+  #sobre .fundo {
+    padding: 10px;
+  }
 }
 #sobre div {
   display: flex;
@@ -116,12 +142,22 @@ header ul li a {
   margin: auto;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+@media only screen and (max-width: 690px) {
+  #sobre div {
+    padding: 30px;
+  }
+}
 #sobre h2 {
   font-size: 65px;
   text-align: center;
   font-family: "Satisfy", cursive;
   font-weight: 500;
   font-style: normal;
+}
+@media only screen and (max-width: 766px) {
+  #sobre h2 {
+    font-size: 45px;
+  }
 }
 #sobre p {
   font-size: 26px;
@@ -145,6 +181,11 @@ header ul li a {
 #produtos h2 img {
   width: 300px;
   padding: 0 20px;
+}
+@media only screen and (max-width: 1082px) {
+  #produtos h2 img {
+    display: none;
+  }
 }
 #produtos h3 {
   font-size: 40px;
